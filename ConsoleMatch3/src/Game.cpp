@@ -1,17 +1,18 @@
 #include "Game.h"
 
 namespace RBW {
-	Game::Game() {
+
+	Game::Game() : 
+		_isClosed{ false } {
 		_distro = std::uniform_int_distribution<int>{0, COUNT_OF_CRYSTALLS-1};
-		_crystalls = { "A", "B", "C", "D", "E", "F" };
 	}
 
 	void Game::init() {
 
 	}
 
-	void Game::run() {
-
+	void Game::move(Point from, Point to) {
+		std::swap(_map[from.y][from.x], _map[to.y][to.x]);
 	}
 
 	void Game::fillMapRandomly() {
