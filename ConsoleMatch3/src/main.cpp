@@ -2,6 +2,6 @@
 
 int main() {
 	RBW::Model model;
-	model.init();
+	model.Init();
 	return 0;
 }
