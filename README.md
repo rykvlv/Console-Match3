@@ -9,7 +9,7 @@
     Remove lines with 3 or more crystalls in a sequence
   </li>
   <li>
-    After removing crystall, crystalls above should move down on free spaces
+    After removing crystall, crystalls above should move down on free cells
   </li>
   <li>
     There is no special crystalls with bonus effect, but architecture is made for them in a future updates (NOTE: move() and onDestroy() methods should check a type of crystall)
@@ -35,12 +35,13 @@
           </li>
         </ul>
       </li>
+      <li>
+           <b>x, y</b> - coordinates in table. Note that <b>x</b> is a coord for a column(horizontal), and <b>y</b> is for a row(vertical).
+          </li>
+          <li>
+            <b>d</b> - direction to move. Require only one letter, which is first letter of direction(left, right, up, down)
+           </li>
     </ul>
    </li>
-   <li>
-     <b>x, y</b> - coordinates in table. Note that <b>x</b> is a coord for a column(horizontal), and <b>y</b> is for a row(vertical).
-   </li>
-   <li>
-     <b>d</b> - direction to move. Require only one letter, which is first letter of direction(left, right, up, down)
-   </li>
+   
 </ul>
