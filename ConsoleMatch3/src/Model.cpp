@@ -69,7 +69,7 @@ namespace RBW {
 			}
 		}
 
-		while (lookForMatches().size() != 0 || !lookForPossibleMoves()) {
+		if (lookForMatches().size() != 0 || !lookForPossibleMoves()) {
 			fillMapRandomly();
 		}
 	}
