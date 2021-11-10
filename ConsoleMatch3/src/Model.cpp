@@ -68,11 +68,8 @@ namespace RBW {
 				elem = _crystalls[_distro(_random_engine)];
 			}
 		}
-		if (lookForMatches().size() != 0) {
-			fillMapRandomly();
-		}
 
-		if (!lookForPossibleMoves()) {
+		while (lookForMatches().size() != 0 || !lookForPossibleMoves()) {
 			fillMapRandomly();
 		}
 	}
