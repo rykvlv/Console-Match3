@@ -11,7 +11,7 @@ namespace RBW {
 		_visualizer(std::make_unique<Visualizer>()),
 		_distro { std::uniform_int_distribution<int>{ 0, COUNT_OF_CRYSTALLS - 1 }},
 		_g{_rd()},
-		ticker{ 0 } {
+		_ticker{ 0 } {
 
 	}
 
@@ -37,12 +37,12 @@ namespace RBW {
 
 	void Model::Tick() {
 		std::this_thread::sleep_for(50ms);
-		_visualizer->draw(_map);
-		++ticker;
+		_visualizer->Draw(_map);
+		++_ticker;
 	}
 
 	void Model::Dump() {
-		ticker = 0;
+		_ticker = 0;
 	}
 
 	void Model::Move(Point from, Point to) {

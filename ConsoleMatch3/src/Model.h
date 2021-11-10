@@ -43,7 +43,7 @@ namespace RBW {
 
 		bool _isClosed;
 
-		int ticker;
+		int _ticker;
 
 		void fillMapRandomly();
 

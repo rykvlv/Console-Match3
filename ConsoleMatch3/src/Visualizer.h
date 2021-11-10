@@ -16,7 +16,7 @@ namespace RBW {
 		Visualizer();
 
 		template<typename T, size_t size>
-		void draw(const std::array<T, size>& map) const {
+		void Draw(const std::array<T, size>& map) const {
 			CLEAR_SCREEN
 			std::cout << "    ";
 			for (int i = 0; i < map.size(); ++i) {
