@@ -1,7 +1,8 @@
-#include "Model.h"
+#include "Controller.h"
 
 int main() {
-	RBW::Model model;
-	model.Init();
-	return 0;
+    RBW::Controller controller;
+    controller.Run();
+
+    return 0;
 }
