@@ -1,24 +1,14 @@
 #include "Controller.h"
 
 extern "C" {
-# include <Lua/lua.h>
-# include <Lua/lauxlib.h>
-# include <Lua/lualib.h>
+#include <Lua/lua.h>
+#include <Lua/lauxlib.h>
+#include <Lua/lualib.h>
 }
 
 #include <LuaBridge/LuaBridge.h>
 
 using namespace luabridge;
-
-extern "C" int sum(lua_State * L) {
-    int a = lua_tointeger(L, 1);
-    int b = lua_tointeger(L, 2);
-    int result = a + b;
-
-    lua_pushinteger(L, result);
-
-    return 1;
-}
 
 extern "C" int Run(lua_State * L) {
     RBW::Controller controller;
