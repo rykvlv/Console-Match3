@@ -20,7 +20,7 @@ namespace RBW {
         
         void Run();
     private:
-        std::shared_ptr<Model> _model;
+        std::unique_ptr<Model> _model;
         std::unique_ptr<Visualizer> _visualizer;
         
         std::vector<std::vector<char>> getTransformedMap(const std::vector<std::vector<Crystall>>& map);

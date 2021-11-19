@@ -7,8 +7,8 @@ using namespace std::chrono_literals;
 
 namespace RBW {
     Controller::Controller() {
-        _model = std::shared_ptr<Model>(new Model());
-        _visualizer = std::unique_ptr<Visualizer>(new Visualizer());
+        _model = std::make_unique<Model>();
+        _visualizer = std::make_unique<Visualizer>();
         _isClosed = false;
         
         _commands = {'m', 'q', 's'};
@@ -30,7 +30,7 @@ namespace RBW {
                     while (!ticks.empty()) {
                         _visualizer->Draw(getTransformedMap(ticks.front()));
                         ticks.pop();
-                        std::this_thread::sleep_for(100ms);
+                        std::this_thread::sleep_for(50ms);
                     }
                     _model->Dump();
                 } else {
